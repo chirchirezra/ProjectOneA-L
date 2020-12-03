@@ -5,6 +5,7 @@ page 50001 StudentCard
     UsageCategory = Administration;
     SourceTable = Student;
     Editable = true;
+    DataCaptionFields = "Admision Number", Gender;
 
     layout
     {
