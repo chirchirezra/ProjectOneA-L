@@ -6,8 +6,6 @@ page 50003 "Student List"
     UsageCategory = Lists;
     ApplicationArea = All;
     SourceTable = Student;
-
-
     layout
     {
         area(Content)
@@ -41,18 +39,22 @@ page 50003 "Student List"
 
         }
     }
-
     actions
     {
         area(Processing)
         {
-            action(ActionName)
+            action(RunDotNet)
             {
                 ApplicationArea = All;
 
                 trigger OnAction();
+                var
+                    VarTextBuilder: TextBuilder;
                 begin
-
+                    VarTextBuilder.AppendLine('Hello this is a text builder introduction');
+                    VarTextBuilder.Append('This is a line append');
+                    VarTextBuilder.Replace('Hello', 'Bonjour');
+                    Message(VarTextBuilder.ToText());
                 end;
             }
         }
